@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - "charts/**"
+  push:
+    paths:
+      - "charts/**"
 
 jobs:
   lint-chart:
