@@ -1,47 +1,49 @@
 name: Lint and Test Charts
 
-on:
-  pull_request:
-    paths:
-      - "charts/**"
-  push:
-    paths:
-      - "charts/**"
+on: [pull_request, push]
 
 jobs:
-  lint-chart:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-      - name: Run chart-testing (lint)
-        uses: helm/chart-testing-action@v2.0.1
-        with:
-          command: lint
-          config: ct.yaml
+        uses: actions/checkout@v2
 
-  install-chart:
-    name: install-chart
+      - name: Set up Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.4.0
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Set up chart-testing
+        uses: helm/chart-testing-action@v2.0.1
+
+      - name: Run chart-testing (lint)
+        run: ct lint --config ct.yaml
+
+  kind:
     runs-on: ubuntu-latest
-    needs:
-      - lint-chart
-    strategy:
-      matrix:
-        k8s:
-          - v1.17.2
-          - v1.18.19
-          - v1.19.11
-          - v1.20.7
-          - v1.21.1
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-      - name: Create kind ${{ matrix.k8s }} cluster
-        uses: helm/kind-action@v1.1.0
+        uses: actions/checkout@v2
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v1
         with:
-          node_image: kindest/node:${{ matrix.k8s }}
-      - name: Run chart-testing (install)
+          version: v3.4.0
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Set up chart-testing
         uses: helm/chart-testing-action@v2.0.1
-        with:
-          command: install
-          config: .github/ct.yaml
+
+      - name: Create kind cluster
+        uses: helm/kind-action@v1.1.0
+
+      - name: Run chart-testing (install)
+        run: ct install --config ct.yaml
