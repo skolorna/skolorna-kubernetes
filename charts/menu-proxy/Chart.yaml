@@ -2,5 +2,8 @@ apiVersion: v2
 name: menu-proxy
 description: Menu Proxy in Kubernetes.
 type: application
-version: 0.1.0
-appVersion: "v0.1.0-alpha.3"
+version: 0.1.1
+appVersion: 0.1.0-alpha.5
+maintainers:
+  - name: ThePicoNerd
+    email: ake.amcoff@gmail.com
