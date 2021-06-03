@@ -16,7 +16,3 @@ appVersion: 0.1.0-alpha.5
 maintainers:
   - name: ThePicoNerd
     email: ake.amcoff@gmail.com
-dependencies:
-  - name: kube-httpcache
-    version: 0.0.1
-    repository: https://inteskolplattformen.github.io/inteskolplattformen-kubernetes
