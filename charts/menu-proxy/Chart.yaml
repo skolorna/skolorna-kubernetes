@@ -3,15 +3,6 @@ name: menu-proxy
 description: Menu Proxy in Kubernetes.
 type: application
 version: 0.2.0
-appVersion: 1.0.3
-maintainers:
-  - name: ThePicoNerd
-    email: ake.amcoff@gmail.com
-apiVersion: v2
-name: menu-proxy
-description: Menu Proxy in Kubernetes.
-type: application
-version: 0.2.0
 appVersion: 1.0.4
 maintainers:
   - name: ThePicoNerd
