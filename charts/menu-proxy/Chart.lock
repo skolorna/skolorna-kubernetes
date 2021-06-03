@@ -1,0 +1,6 @@
+dependencies:
+- name: kube-httpcache
+  repository: https://inteskolplattformen.github.io/inteskolplattformen-kubernetes
+  version: 0.0.1
+digest: sha256:dafb5e1267eb81dfc647dd30bf7bb0258af8523e768f08b94bdea8500fc01aef
+generated: "2021-06-03T21:00:49.8721986+02:00"
