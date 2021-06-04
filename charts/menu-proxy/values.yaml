@@ -78,18 +78,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-kube-httpcache:
-  cache:
-    # If fullNameOverride is non-empty, you probably need to change this
-    backendService: menu-proxy
-    storageSize: 32M # You probably don't need a larger cache.
-
-  service:
-    type: NodePort
-
-  resources:
-    limits:
-      memory: 128Mi
-    requests:
-      memory: 96Mi
