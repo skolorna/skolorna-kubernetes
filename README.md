@@ -1,1 +1,1 @@
-<h1 align="center">Inte Skolplattformen Kubernetes</h1>
+<h1 align="center">Skolorna Kubernetes</h1>
