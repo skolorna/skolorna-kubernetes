@@ -2,6 +2,19 @@ apiVersion: v1
 entries:
   menu-proxy:
   - apiVersion: v2
+    appVersion: 1.2.2
+    created: "2021-08-13T15:47:41.523380854Z"
+    description: Menu Proxy in Kubernetes.
+    digest: 9a55e8eb7e5e4ab93153ab25aaa85026546b175a5f04393ccaed50e814a0ca35
+    maintainers:
+    - email: ake@amcoff.net
+      name: ThePicoNerd
+    name: menu-proxy
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/menu-proxy-0.1.4/menu-proxy-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 1.2.1
     created: "2021-08-13T09:13:01.233445441Z"
     description: Menu Proxy in Kubernetes.
@@ -53,4 +66,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/menu-proxy-0.1.0/menu-proxy-0.1.0.tgz
     version: 0.1.0
-generated: "2021-08-13T09:13:01.233877346Z"
+generated: "2021-08-13T15:47:41.523398055Z"
