@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  cloudflared:
+  - apiVersion: v2
+    appVersion: 2021.8.2
+    created: "2021-08-14T18:51:45.235717183Z"
+    description: A Helm chart for Kubernetes
+    digest: 716990ad92676904f58cac9d68ccb2ba9b93265717e02ab5ee78ac259417699f
+    name: cloudflared
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/cloudflared-0.1.0/cloudflared-0.1.0.tgz
+    version: 0.1.0
   menu-proxy:
   - apiVersion: v2
     appVersion: 1.2.2
@@ -97,4 +108,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/opengraph-0.1.0/opengraph-0.1.0.tgz
     version: 0.1.0
-generated: "2021-08-13T21:54:24.452986045Z"
+generated: "2021-08-14T18:51:45.235740083Z"
