@@ -1,0 +1,1 @@
+The Cloudflare Tunnel {{ .Values.tunnel.name }} has been installed!
