@@ -57,7 +57,8 @@ ingress:
   #      - auth1.local
 
 postgres:
-  url: ""
+  # The Postgres secret should contain a key named url.
+  secretName: ""
 
 redis:
   enabled: true

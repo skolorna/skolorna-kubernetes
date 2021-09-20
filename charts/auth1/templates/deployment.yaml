@@ -72,7 +72,10 @@ spec:
                   name: {{ .Values.smtp.secretName }}
                   key: password
             - name: POSTGRES_URL
-              value: {{ .Values.postgres.url }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.postgres.secretName }}
+                  key: url
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
