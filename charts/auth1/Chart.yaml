@@ -9,7 +9,7 @@ dependencies:
     alias: redis
     version: "6.3.6"
     repository: "https://charts.bitnami.com/bitnami"
-    condition: redis-cluster.enabled
+    condition: redis.enabled
 maintainers:
   - name: ThePicoNerd
     email: ake@amcoff.net
