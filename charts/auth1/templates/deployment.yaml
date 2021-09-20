@@ -49,17 +49,18 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
             - name: REDIS_URL
-              {{ if .Values.redis.url }}
+              {{- if .Values.redis.url }}
               value: {{ .Values.redis.url }}
-              {{ else }}
+              {{- else }}
               value: "redis://{{ include "auth1.fullname" . }}-redis"
-              {{ end }}
+              {{- end }}
+            - name: TRUST_PROXY
+              value: {{ quote .Values.trustProxy }}
             - name: SMTP_HOST
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.smtp.secretName }}
                   key: host
-              value: {{ .Values.smtp.host }}
             - name: SMTP_USERNAME
               valueFrom:
                 secretKeyRef:
