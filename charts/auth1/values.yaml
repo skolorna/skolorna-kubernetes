@@ -63,15 +63,17 @@ postgres:
 redis:
   enabled: true
   url: ""
+  # Auth1 doesn't support clustered Redis yet...
+  architecture: standalone
   auth:
     password: password
   master:
     persistence:
       enabled: false
-  replica:
-    replicaCount: 1
-    persistence:
-      enabled: false
+  # replica:
+  #   replicaCount: 1
+  #   persistence:
+  #     enabled: false
 
 smtp:
   # The SMTP secret should contain the following keys:
