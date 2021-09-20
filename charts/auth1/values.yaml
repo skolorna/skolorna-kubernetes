@@ -63,9 +63,15 @@ postgres:
 redis:
   enabled: true
   url: ""
-  password: password
-  persistence:
-    enabled: false
+  auth:
+    password: password
+  master:
+    persistence:
+      enabled: false
+  replica:
+    replicaCount: 1
+    persistence:
+      enabled: false
 
 smtp:
   # The SMTP secret should contain the following keys:

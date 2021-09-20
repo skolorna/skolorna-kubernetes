@@ -52,7 +52,7 @@ spec:
               {{- if .Values.redis.url }}
               value: {{ .Values.redis.url }}
               {{- else }}
-              value: "redis://{{ include "auth1.fullname" . }}-redis"
+              value: "redis://{{ include "auth1.fullname" . }}-redis-master"
               {{- end }}
             - name: TRUST_PROXY
               value: {{ quote .Values.trustProxy }}
