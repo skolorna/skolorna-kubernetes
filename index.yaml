@@ -418,6 +418,19 @@ entries:
     version: 0.1.0
   schedule:
   - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2021-10-15T21:56:51.944049003Z"
+    description: A Helm chart for Kubernetes
+    digest: e5b8adc790d812f3ad09419c48314f9d5ae49c0bd6404ef4f7af6b34234b11c6
+    maintainers:
+    - email: ake@amcoff.net
+      name: ThePicoNerd
+    name: schedule
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/schedule-0.1.1/schedule-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 0.1.1
     created: "2021-10-15T20:06:58.883908251Z"
     description: A Helm chart for Kubernetes
@@ -430,4 +443,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/schedule-0.1.0/schedule-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-15T20:06:58.884009653Z"
+generated: "2021-10-15T21:56:51.944418822Z"
