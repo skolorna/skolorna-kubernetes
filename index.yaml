@@ -416,4 +416,18 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/opengraph-0.1.0/opengraph-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-14T19:30:12.248332066Z"
+  schedule:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2021-10-15T20:06:58.883908251Z"
+    description: A Helm chart for Kubernetes
+    digest: 9f47849e9604c5accdbc45b9b3704865411faed3eccd04af56e2bb55e2c0dca5
+    maintainers:
+    - email: ake@amcoff.net
+      name: ThePicoNerd
+    name: schedule
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/schedule-0.1.0/schedule-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-10-15T20:06:58.884009653Z"
