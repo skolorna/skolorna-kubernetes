@@ -1,0 +1,60 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ include "munin.fullname" . }}
+  labels:
+    {{- include "munin.labels" . | nindent 4 }}
+spec:
+  schedule: {{ quote .Values.schedule }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          {{- with .Values.imagePullSecrets }}
+          imagePullSecrets:
+            {{- toYaml . | nindent 8 }}
+          {{- end }}
+          serviceAccountName: {{ include "munin.serviceAccountName" . }}
+          securityContext:
+            {{- toYaml .Values.podSecurityContext | nindent 12 }}
+          restartPolicy: OnFailure
+          containers:
+            - name: {{ .Chart.Name }}
+              securityContext:
+                {{- toYaml .Values.securityContext | nindent 16 }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              resources:
+                {{- toYaml .Values.resources | nindent 16 }}
+              args: ["--load-menus", "--limit", "1000"]
+              env:
+                - name: POSTGRES_URL
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ .Values.postgresSecretName }}
+                      key: POSTGRES_URL
+                - name: RUST_LOG
+                  value: info
+                {{- if .Values.meili.url }}
+                - name: MEILI_URL
+                  value: {{ .Values.meili.url }}
+                {{- end }}
+                {{- if .Values.meili.secretName }}
+                - name: MEILI_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ .Values.meili.secretName }}
+                      key: MEILI_MASTER_KEY
+                {{- end }}
+          {{- with .Values.nodeSelector }}
+          nodeSelector:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.tolerations }}
+          tolerations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
