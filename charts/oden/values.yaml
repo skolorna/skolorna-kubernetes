@@ -1,0 +1,16 @@
+# Default values for oden.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+munin:
+  meili:
+    url: http://oden-meilisearch:7700
+    secretName: oden-meilisearch-master-key
+
+meilisearch:
+  enabled: true
+  environment:
+    MEILI_ENV: production
+  persistence:
+    enabled: false
+    size: 100Mi
