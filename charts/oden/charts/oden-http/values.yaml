@@ -1,18 +1,21 @@
-# Default values for munin.
+# Default values for oden-http.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+replicaCount: 1
+
 image:
-  repository: ghcr.io/skolorna/munin
+  repository: ghcr.io/skolorna/oden-http
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
-schedule: "*/60 * * * *"
-
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
+
+# Must contain a key "POSTGRES_URL"
+postgresSecretName: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -23,23 +26,12 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
-# This secret should contain a key "POSTGRES_URL".
-postgresSecretName: ""
-
-meili:
-  url: ""
-
-  # Secret should contain MEILI_MASTER_KEY.
-  secretName: ""
-
 podAnnotations: {}
 
-podSecurityContext:
-  {}
+podSecurityContext: {}
   # fsGroup: 2000
 
-securityContext:
-  {}
+securityContext: {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -47,8 +39,27 @@ securityContext:
   # runAsNonRoot: true
   # runAsUser: 1000
 
-resources:
-  {}
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -59,6 +70,13 @@ resources:
   # requests:
   #   cpu: 100m
   #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
 

@@ -9,6 +9,7 @@ dependencies:
     repository: "https://meilisearch.github.io/meilisearch-kubernetes"
     condition: meilisearch.enabled
   - name: munin
+  - name: oden-http
 maintainers:
   - name: ThePicoNerd
     email: ake@amcoff.net
