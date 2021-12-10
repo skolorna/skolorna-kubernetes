@@ -475,6 +475,16 @@ entries:
     version: 0.1.0
   opengraph:
   - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2021-12-10T20:10:47.358113949Z"
+    description: A Helm chart for Kubernetes
+    digest: d53179db41e0a7e792a3a18b1bd5e8124c73e805ce30ff5435fc3faba120e7ba
+    name: opengraph
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/opengraph-0.1.3/opengraph-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 1.0.1
     created: "2021-08-13T21:54:24.452955444Z"
     description: A Helm chart for Kubernetes
@@ -544,4 +554,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/schedule-0.1.0/schedule-0.1.0.tgz
     version: 0.1.0
-generated: "2021-11-22T16:16:05.069017955Z"
+generated: "2021-12-10T20:10:47.35829135Z"
