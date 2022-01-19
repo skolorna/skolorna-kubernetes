@@ -554,4 +554,15 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/schedule-0.1.0/schedule-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-10T20:10:47.35829135Z"
+  skool:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-01-19T20:00:09.614922194Z"
+    description: A Helm chart for Kubernetes
+    digest: 5b7422f9fa2526180f5f86192a0c89c9e18e31fcea219d883646246545054057
+    name: skool
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/skool-0.1.0/skool-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-01-19T20:00:09.615085795Z"
