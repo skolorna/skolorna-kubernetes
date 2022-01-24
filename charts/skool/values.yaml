@@ -80,7 +80,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-cookie:
-  domain: "localhost"
-  path: "/"

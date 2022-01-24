@@ -48,15 +48,11 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: COOKIE_DOMAIN
-              value: {{ .Values.cookie.domain }}
-            - name: COOKIE_PATH
-              value: {{ .Values.cookie.path }}
-            - name: COOKIE_KEY
+            - name: CRYPTO_KEY
               valueFrom:
                 secretKeyRef:
                   name: {{ include "skool.fullname" . }}
-                  key: COOKIE_KEY
+                  key: CRYPTO_KEY
             - name: WEBHOOK_KEY
               valueFrom:
                 secretKeyRef:
