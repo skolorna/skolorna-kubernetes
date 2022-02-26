@@ -10,5 +10,5 @@ dependencies:
     repository: "https://charts.bitnami.com/bitnami"
     condition: redis.enabled
 maintainers:
-  - name: ThePicoNerd
+  - name: akeamc
     email: ake@amcoff.net

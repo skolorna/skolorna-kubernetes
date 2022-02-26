@@ -13,5 +13,5 @@ dependencies:
   - name: oden-http
     version: 0.1.2
 maintainers:
-  - name: ThePicoNerd
+  - name: akeamc
     email: ake@amcoff.net
