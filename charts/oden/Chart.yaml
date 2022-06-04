@@ -9,7 +9,7 @@ dependencies:
     repository: "https://meilisearch.github.io/meilisearch-kubernetes"
     condition: meilisearch.enabled
   - name: munin
-    version: 0.1.3
+    version: 0.1.4
   - name: oden-http
     version: 0.1.3
 maintainers:
