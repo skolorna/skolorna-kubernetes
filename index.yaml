@@ -612,6 +612,16 @@ entries:
     version: 0.1.0
   skool:
   - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2022-06-04T16:44:00.622983273Z"
+    description: A Helm chart for Kubernetes
+    digest: 7481c01dfd479e373a49e46c82d46b5c6565366d77414d7b0e361d24549de3f3
+    name: skool
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/skool-0.1.8/skool-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
     appVersion: 0.2.0
     created: "2022-02-26T20:35:02.04037374Z"
     description: A Helm chart for Kubernetes
@@ -691,4 +701,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/skool-0.1.0/skool-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-19T18:09:49.495508433Z"
+generated: "2022-06-04T16:44:00.623185281Z"
