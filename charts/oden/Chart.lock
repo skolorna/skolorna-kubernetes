@@ -4,9 +4,9 @@ dependencies:
   version: 0.1.34
 - name: munin
   repository: ""
-  version: 0.1.4
+  version: 0.1.5
 - name: oden-http
   repository: ""
   version: 0.1.3
-digest: sha256:713867bca202daab0d9024cb976c339db6558490242b3a795fba5991ae107ee0
-generated: "2022-06-04T22:44:03.688902+02:00"
+digest: sha256:d85d2ac4cd1b28cfcdec1dcfeee6c396c904f2d58f9450dbad0b9140062787dd
+generated: "2022-06-04T22:51:03.829397+02:00"
