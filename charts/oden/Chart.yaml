@@ -11,7 +11,7 @@ dependencies:
   - name: munin
     version: 0.1.5
   - name: oden-http
-    version: 0.1.3
+    version: 0.1.4
 maintainers:
   - name: akeamc
     email: ake@amcoff.net
