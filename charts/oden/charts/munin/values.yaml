@@ -32,6 +32,11 @@ meili:
   # Secret should contain MEILI_MASTER_KEY.
   secretName: ""
 
+sentry:
+  dsn: ""
+
+  environment: ""
+
 podAnnotations: {}
 
 podSecurityContext:

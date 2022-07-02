@@ -46,6 +46,14 @@ spec:
                       name: {{ .Values.meili.secretName }}
                       key: MEILI_MASTER_KEY
                 {{- end }}
+                {{- if .Values.sentry.dsn }}
+                - name: SENTRY_DSN
+                  value: {{ .Values.sentry.dsn }}
+                {{- end }}
+                {{- if .Values.sentry.environment }}
+                - name: SENTRY_ENVIRONMENT
+                  value: {{ .Values.sentry.environment }}
+                {{- end }}
           {{- with .Values.nodeSelector }}
           nodeSelector:
             {{- toYaml . | nindent 12 }}
