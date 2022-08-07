@@ -48,16 +48,11 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: CRYPTO_KEY
+            - name: TOKEN_KEY
               valueFrom:
                 secretKeyRef:
                   name: {{ include "skool.fullname" . }}
-                  key: CRYPTO_KEY
-            - name: WEBHOOK_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: {{ include "skool.fullname" . }}
-                  key: WEBHOOK_KEY
+                  key: TOKEN_KEY
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
