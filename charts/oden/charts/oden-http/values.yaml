@@ -17,6 +17,12 @@ fullnameOverride: ""
 # Must contain a key "POSTGRES_URL"
 postgresSecretName: ""
 
+meili:
+  url: ""
+
+  # Secret should contain MEILI_MASTER_KEY.
+  secretName: ""
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true

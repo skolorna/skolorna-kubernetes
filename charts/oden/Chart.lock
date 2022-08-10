@@ -7,6 +7,6 @@ dependencies:
   version: 0.1.7
 - name: oden-http
   repository: ""
-  version: 0.1.6
-digest: sha256:572b892fc68aca87a2a312295e32aa55452e8ce3608573d5843317f0991eaf25
-generated: "2022-08-10T16:51:33.732525321+02:00"
+  version: 0.1.7
+digest: sha256:0273bfed8c2d692bc5398530c8528f4399009478d8a8b637b779b43436863fdd
+generated: "2022-08-10T17:09:47.754357046+02:00"

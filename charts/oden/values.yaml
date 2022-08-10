@@ -8,8 +8,11 @@ munin:
     secretName: oden-meilisearch-master-key
   # postgresSecretName: postgres
 
-# oden-http:
-#   postgresSecretName: postgres
+oden-http:
+  meili:
+    url: http://oden-meilisearch:7700
+    secretName: oden-meilisearch-master-key
+  # postgresSecretName: postgres
 
 meilisearch:
   enabled: true
