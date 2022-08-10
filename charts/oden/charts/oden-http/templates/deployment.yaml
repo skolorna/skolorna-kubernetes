@@ -51,6 +51,17 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.postgresSecretName }}
                   key: POSTGRES_URL
+            {{- if .Values.meili.url }}
+            - name: MEILI_URL
+              value: {{ .Values.meili.url }}
+            {{- end }}
+            {{- if .Values.meili.secretName }}
+            - name: MEILI_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.meili.secretName }}
+                  key: MEILI_MASTER_KEY
+            {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
