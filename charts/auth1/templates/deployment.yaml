@@ -71,11 +71,13 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.smtp.secretName }}
                   key: password
-            - name: POSTGRES_URL
+            - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.postgres.secretName }}
                   key: url
+            - name: VERIFICATION_URL
+              value: {{ .Values.verificationUrl }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
