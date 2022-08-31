@@ -84,6 +84,10 @@ smtp:
 
 trustProxy: false
 
+# the verification url is used to verify the user's email address.
+# {token} is a placeholder for the token that will be sent to the user.
+verificationUrl: ""
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
