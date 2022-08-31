@@ -77,7 +77,7 @@ spec:
                   name: {{ .Values.postgres.secretName }}
                   key: url
             - name: VERIFICATION_URL
-              value: {{ .Values.verificationUrl }}
+              value: {{ quote .Values.verificationUrl }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
