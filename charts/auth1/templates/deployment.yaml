@@ -78,6 +78,10 @@ spec:
                   key: url
             - name: VERIFICATION_URL
               value: {{ quote .Values.verificationUrl }}
+            - name: SENTRY_DSN
+              value: {{ quote .Values.sentry.dsn }}
+            - name: SENTRY_ENVIRONMENT
+              value: {{ quote .Values.sentry.environment }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
