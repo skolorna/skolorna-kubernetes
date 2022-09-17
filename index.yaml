@@ -438,6 +438,16 @@ entries:
     version: 0.1.0
   cloudflared:
   - apiVersion: v2
+    appVersion: 2022.9.0-amd64
+    created: "2022-09-17T14:10:02.529603424Z"
+    description: A Helm chart for Kubernetes
+    digest: d5bb5503f55547c85b1142d9cdc18ceb71c7f77de8af7151b12d082bb0eb11f1
+    name: cloudflared
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/cloudflared-0.1.1/cloudflared-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 2021.8.2
     created: "2021-08-14T18:51:45.235717183Z"
     description: A Helm chart for Kubernetes
@@ -1103,4 +1113,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/skool-0.1.0/skool-0.1.0.tgz
     version: 0.1.0
-generated: "2022-09-15T20:55:51.280407102Z"
+generated: "2022-09-17T14:10:02.530113231Z"
