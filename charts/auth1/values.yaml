@@ -88,6 +88,10 @@ trustProxy: false
 # {token} is a placeholder for the token that will be sent to the user.
 verificationUrl: ""
 
+# the reset password url is used to reset the user's password.
+# {token} is a placeholder for the token that will be sent to the user.
+passwordResetUrl: ""
+
 sentry:
   dsn: ""
 

@@ -78,6 +78,8 @@ spec:
                   key: url
             - name: VERIFICATION_URL
               value: {{ quote .Values.verificationUrl }}
+            - name: PASSWORD_RESET_URL
+              value: {{ quote .Values.passwordResetUrl }}
             - name: SENTRY_DSN
               value: {{ quote .Values.sentry.dsn }}
             - name: SENTRY_ENVIRONMENT
