@@ -80,3 +80,12 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+postgres:
+  # the referenced secret must contain a `url` field with a postgres connection string
+  secretName: ""
+
+redis:
+  master:
+    persistence:
+      enabled: false
