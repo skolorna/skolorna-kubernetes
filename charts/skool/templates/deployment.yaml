@@ -59,7 +59,7 @@ spec:
                   name: {{ .Values.postgres.secretName }}
                   key: url
             - name: REDIS_URL
-              value: "redis://{{ include "skool.fullname" . }}-redis-master"
+              value: "redis://:{{ .Values.redis.auth.password }}@{{ include "skool.fullname" . }}-redis-master"
             - name: SENTRY_DSN
               value: {{ .Values.sentry.dsn | quote }}
             - name: SENTRY_ENVIRONMENT

@@ -86,6 +86,9 @@ postgres:
   secretName: ""
 
 redis:
+  architecture: standalone
+  auth:
+    password: redis
   master:
     persistence:
       enabled: false
