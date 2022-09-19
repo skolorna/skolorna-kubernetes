@@ -48,11 +48,22 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: TOKEN_KEY
+            - name: AES_KEY
               valueFrom:
                 secretKeyRef:
                   name: {{ include "skool.fullname" . }}
-                  key: TOKEN_KEY
+                  key: aesKey
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.postgres.secretName }}
+                  key: url
+            - name: REDIS_URL
+              value: "redis://{{ include "skool.fullname" . }}-redis-master"
+            - name: SENTRY_DSN
+              value: {{ .Values.sentry.dsn | quote }}
+            - name: SENTRY_ENVIRONMENT
+              value: {{ .Values.sentry.environment | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
