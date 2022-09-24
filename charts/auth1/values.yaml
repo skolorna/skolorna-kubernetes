@@ -75,6 +75,9 @@ redis:
   #   persistence:
   #     enabled: false
 
+ca:
+  secretName: ""
+
 smtp:
   # The SMTP secret should contain the following keys:
   # - host

@@ -84,6 +84,18 @@ spec:
               value: {{ quote .Values.sentry.dsn }}
             - name: SENTRY_ENVIRONMENT
               value: {{ quote .Values.sentry.environment }}
+            {{- if .Values.ca.secretName }}
+            - name: CA_CERT
+              value: /etc/ssl/ca/tls.crt
+            - name: CA_KEY
+              value: /etc/ssl/ca/tls.key
+            {{- end }}
+          {{- if .Values.ca.secretName }}
+          volumeMounts:
+            - name: ca
+              mountPath: /etc/ssl/ca
+              readOnly: true
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -95,4 +107,10 @@ spec:
       {{- with .Values.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- if .Values.ca.secretName }}
+      volumes:
+        - name: ca
+          secret:
+            secretName: {{ quote .Values.ca.secretName }}
       {{- end }}
