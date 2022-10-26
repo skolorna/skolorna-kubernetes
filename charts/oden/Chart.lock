@@ -1,12 +1,12 @@
 dependencies:
 - name: meilisearch
   repository: https://meilisearch.github.io/meilisearch-kubernetes
-  version: 0.1.34
+  version: 0.1.41
 - name: munin
   repository: ""
-  version: 0.1.8
+  version: 0.1.9
 - name: oden-http
   repository: ""
-  version: 0.1.7
-digest: sha256:863e817fdd81b8e5ce34db4f74220e01db764fba0b897e15f17b1efcb3e4ca42
-generated: "2022-09-02T16:49:48.100563186+02:00"
+  version: 0.1.8
+digest: sha256:f713e295ccd21cd0eba0eaca4af8d9c174e482dc89a121fdaa3c4bc4ab032ca4
+generated: "2022-10-26T21:51:22.965413873+02:00"
