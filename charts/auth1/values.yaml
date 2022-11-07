@@ -87,13 +87,8 @@ smtp:
 
 trustProxy: false
 
-# the verification url is used to verify the user's email address.
 # {token} is a placeholder for the token that will be sent to the user.
-verificationUrl: ""
-
-# the reset password url is used to reset the user's password.
-# {token} is a placeholder for the token that will be sent to the user.
-passwordResetUrl: ""
+loginUrl: ""
 
 sentry:
   dsn: ""

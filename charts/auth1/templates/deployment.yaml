@@ -76,10 +76,8 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.postgres.secretName }}
                   key: url
-            - name: VERIFICATION_URL
-              value: {{ quote .Values.verificationUrl }}
-            - name: PASSWORD_RESET_URL
-              value: {{ quote .Values.passwordResetUrl }}
+            - name: LOGIN_URL
+              value: {{ quote .Values.loginUrl }}
             - name: SENTRY_DSN
               value: {{ quote .Values.sentry.dsn }}
             - name: SENTRY_ENVIRONMENT
