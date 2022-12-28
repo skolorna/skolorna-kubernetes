@@ -93,6 +93,5 @@ redis:
     persistence:
       enabled: false
 
-sentry:
-  dsn: ""
-  environment: ""
+otlp:
+  endpoint: ""

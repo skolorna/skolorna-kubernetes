@@ -60,10 +60,8 @@ spec:
                   key: url
             - name: REDIS_URL
               value: "redis://:{{ .Values.redis.auth.password }}@{{ include "skool.fullname" . }}-redis-master"
-            - name: SENTRY_DSN
-              value: {{ .Values.sentry.dsn | quote }}
-            - name: SENTRY_ENVIRONMENT
-              value: {{ .Values.sentry.environment | quote }}
+            - name: OTLP_ENDPOINT
+              value: {{ .Values.otlp.endpoint | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
