@@ -38,7 +38,7 @@ spec:
                 {{- if .Values.osm.secretName }}
                 - name: OSM_GH_PAT
                   valueFrom:
-                    secretkeyRef:
+                    secretKeyRef:
                       name: {{ .Values.osm.secretName }}
                       key: personalAccessToken
                 {{- end }}
