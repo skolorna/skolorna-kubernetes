@@ -721,6 +721,29 @@ entries:
     version: 0.1.0
   oden:
   - apiVersion: v2
+    created: "2023-01-15T20:55:44.232707411Z"
+    dependencies:
+    - condition: meilisearch.enabled
+      name: meilisearch
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.1.45
+    - name: munin
+      repository: ""
+      version: 0.2.2
+    - name: hugin
+      repository: ""
+      version: 0.2.2
+    description: A Helm chart for Kubernetes
+    digest: 47d6f3c08578f182b467441acbfbe2fe36a4afd9cb0f4d3fa5f3537a94e78f66
+    maintainers:
+    - email: ake@amcoff.net
+      name: akeamc
+    name: oden
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/oden-0.2.2/oden-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
     created: "2023-01-15T20:49:12.464784327Z"
     dependencies:
     - condition: meilisearch.enabled
@@ -1552,4 +1575,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/skool-0.1.0/skool-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-15T20:49:12.465223532Z"
+generated: "2023-01-15T20:55:44.233287818Z"
