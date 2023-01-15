@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "oden-http.fullname" . }}
+  name: {{ include "hugin.fullname" . }}
   labels:
-    {{- include "oden-http.labels" . | nindent 4 }}
+    {{- include "hugin.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "oden-http.fullname" . }}
+    name: {{ include "hugin.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

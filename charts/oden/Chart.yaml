@@ -5,13 +5,13 @@ type: application
 version: 0.1.17
 dependencies:
   - name: meilisearch
-    version: 0.1.42
+    version: 0.1.45
     repository: "https://meilisearch.github.io/meilisearch-kubernetes"
     condition: meilisearch.enabled
   - name: munin
-    version: 0.1.11
-  - name: oden-http
-    version: 0.1.9
+    version: 0.2.0
+  - name: hugin
+    version: 0.2.0
 maintainers:
   - name: akeamc
     email: ake@amcoff.net

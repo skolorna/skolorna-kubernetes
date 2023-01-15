@@ -28,13 +28,20 @@ spec:
                 {{- toYaml .Values.resources | nindent 16 }}
               args: ["index", "--load-menus", "--menu-limit", "1000"]
               env:
-                - name: POSTGRES_URL
+                - name: DATABASE_URL
                   valueFrom:
                     secretKeyRef:
                       name: {{ .Values.postgresSecretName }}
-                      key: POSTGRES_URL
+                      key: POSTGRES_URL  
                 - name: RUST_LOG
                   value: info
+                {{- if .Values.osm.secretName }}
+                - name: OSM_GH_PAT
+                  valueFrom:
+                    secretkeyRef:
+                      name: {{ .Values.osm.secretName }}
+                      key: personalAccessToken
+                {{- end }}
                 {{- if .Values.meili.url }}
                 - name: MEILI_URL
                   value: {{ .Values.meili.url }}
@@ -45,14 +52,6 @@ spec:
                     secretKeyRef:
                       name: {{ .Values.meili.secretName }}
                       key: MEILI_MASTER_KEY
-                {{- end }}
-                {{- if .Values.sentry.dsn }}
-                - name: SENTRY_DSN
-                  value: {{ .Values.sentry.dsn }}
-                {{- end }}
-                {{- if .Values.sentry.environment }}
-                - name: SENTRY_ENVIRONMENT
-                  value: {{ .Values.sentry.environment }}
                 {{- end }}
           {{- with .Values.nodeSelector }}
           nodeSelector:
