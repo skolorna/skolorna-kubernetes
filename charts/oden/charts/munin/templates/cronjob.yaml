@@ -34,7 +34,7 @@ spec:
                       name: {{ .Values.postgresSecretName }}
                       key: POSTGRES_URL  
                 - name: RUST_LOG
-                  value: info
+                  value: munin=info
                 {{- if .Values.osm.secretName }}
                 - name: OSM_GH_PAT
                   valueFrom:

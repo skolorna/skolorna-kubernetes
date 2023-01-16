@@ -4,9 +4,9 @@ dependencies:
   version: 0.1.45
 - name: munin
   repository: ""
-  version: 0.2.3
+  version: 0.2.4
 - name: hugin
   repository: ""
-  version: 0.2.3
-digest: sha256:d94e564ea4720e2e4db2e65cbedcb4d5481bfca76fc03f35be5b25cbb31f75e3
-generated: "2023-01-16T08:51:08.906757+01:00"
+  version: 0.2.4
+digest: sha256:adfa1695456ceed64e04bde46629dc6041150435bfb1e7db95708e440748f872
+generated: "2023-01-16T14:01:55.514833+01:00"
