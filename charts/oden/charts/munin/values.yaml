@@ -36,6 +36,8 @@ osm:
   # Secret should contain a `personalAccessToken` field.
   secretName: ""
 
+menuLimit: 1000
+
 podAnnotations: {}
 
 podSecurityContext:
