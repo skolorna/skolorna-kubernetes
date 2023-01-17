@@ -23,6 +23,9 @@ meili:
   # Secret should contain MEILI_MASTER_KEY.
   secretName: ""
 
+otlp:
+  endpoint: ""
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
