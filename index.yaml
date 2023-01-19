@@ -1713,4 +1713,15 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/skool-0.1.0/skool-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-17T11:42:40.849799793Z"
+  trast:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-01-19T20:18:26.248456188Z"
+    description: A Helm chart for Kubernetes
+    digest: e17cd7ab478d7f405508830d7be28691cfb00967d7e656c404e72f6ee3d4569b
+    name: trast
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/trast-0.1.0/trast-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-01-19T20:18:26.249250688Z"
