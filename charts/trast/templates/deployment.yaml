@@ -37,12 +37,12 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-          livenessProbe:
-            grpc:
-              port: {{ .Values.service.port }}
           readinessProbe:
-            grpc:
-              port: {{ .Values.service.port }}
+            exec:
+              command: ["/bin/grpc_health_probe", "-addr=:8000"]
+          livenessProbe:
+            exec:
+              command: ["/bin/grpc_health_probe", "-addr=:8000"]
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
