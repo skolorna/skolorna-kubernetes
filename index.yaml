@@ -1738,6 +1738,16 @@ entries:
     version: 0.1.0
   trast:
   - apiVersion: v2
+    appVersion: 0.2.4
+    created: "2023-02-03T23:48:22.007316338Z"
+    description: A Helm chart for Kubernetes
+    digest: c3a39fc95de07a1fde2f49532f8a6b083cec1835a39c6165e71e6636eae9d674
+    name: trast
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/trast-0.1.3/trast-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 0.2.1
     created: "2023-02-03T21:47:58.363388443Z"
     description: A Helm chart for Kubernetes
@@ -1757,4 +1767,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/trast-0.1.1/trast-0.1.1.tgz
     version: 0.1.1
-generated: "2023-02-03T21:47:58.363969446Z"
+generated: "2023-02-03T23:48:22.007899149Z"
