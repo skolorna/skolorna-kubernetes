@@ -53,6 +53,10 @@ spec:
                       name: {{ .Values.meili.secretName }}
                       key: MEILI_MASTER_KEY
                 {{- end }}
+                {{- if .Values.otlp.endpoint }}
+                - name: OTLP_ENDPOINT
+                  value: {{ .Values.otlp.endpoint }}
+                {{- end }}
           {{- with .Values.nodeSelector }}
           nodeSelector:
             {{- toYaml . | nindent 12 }}

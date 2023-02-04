@@ -36,6 +36,9 @@ osm:
   # Secret should contain a `personalAccessToken` field.
   secretName: ""
 
+otlp:
+  endpoint: ""
+
 menuLimit: 1000
 
 podAnnotations: {}
