@@ -37,7 +37,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
 
 ingress:
@@ -62,11 +62,14 @@ resources:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
-    cpu: 2
+    # cpu: 2
     memory: 1Gi
   requests:
-    cpu: 1
-    memory: 512Mi
+    # cpu: 1
+    memory: 1Gi
+
+otlp:
+  endpoint: ""
 
 autoscaling:
   enabled: false
