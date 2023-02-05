@@ -57,6 +57,10 @@ spec:
                 - name: OTLP_ENDPOINT
                   value: {{ .Values.otlp.endpoint }}
                 {{- end }}
+                {{- if .Values.trast.url }}
+                - name: TRAST_URL
+                  value: {{ .Values.trast.url }}
+                {{- end }}
           {{- with .Values.nodeSelector }}
           nodeSelector:
             {{- toYaml . | nindent 12 }}

@@ -39,6 +39,9 @@ osm:
 otlp:
   endpoint: ""
 
+trast:
+  url: ""
+
 menuLimit: 1000
 
 podAnnotations: {}
