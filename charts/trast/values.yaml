@@ -71,6 +71,8 @@ resources:
 otlp:
   endpoint: ""
 
+workerThreads: 0
+
 autoscaling:
   enabled: false
   minReplicas: 1

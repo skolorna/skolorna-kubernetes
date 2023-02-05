@@ -38,6 +38,8 @@ spec:
             - name: OTLP_ENDPOINT
               value: {{ .Values.otlp.endpoint }}
           {{- end }}
+            - name: NUM_WORKER_THREADS
+              value: {{ .Values.workerThreads | quote }}
           ports:
             - name: grpc
               containerPort: 8000
