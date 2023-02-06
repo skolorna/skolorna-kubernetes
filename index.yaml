@@ -721,6 +721,29 @@ entries:
     version: 0.1.0
   oden:
   - apiVersion: v2
+    created: "2023-02-06T19:22:07.704749129Z"
+    dependencies:
+    - condition: meilisearch.enabled
+      name: meilisearch
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.1.45
+    - name: munin
+      repository: ""
+      version: 0.2.13
+    - name: hugin
+      repository: ""
+      version: 0.2.13
+    description: A Helm chart for Kubernetes
+    digest: 70c190357e9d52c7573841f6e37d0e09aebec9fe59225bd0ef83ef55a2274f49
+    maintainers:
+    - email: ake@amcoff.net
+      name: akeamc
+    name: oden
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/oden-0.2.13/oden-0.2.13.tgz
+    version: 0.2.13
+  - apiVersion: v2
     created: "2023-02-05T12:30:55.478407023Z"
     dependencies:
     - condition: meilisearch.enabled
@@ -1536,6 +1559,23 @@ entries:
     version: 0.1.0
   skool:
   - apiVersion: v2
+    appVersion: 0.4.3
+    created: "2023-02-06T19:22:07.918754743Z"
+    dependencies:
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.x.x
+    description: A Helm chart for Kubernetes
+    digest: f6fc22781084b281ab6d21976c50207ef9af3370c162c4a0f49c6fecab724f44
+    maintainers:
+    - email: ake@amcoff.net
+      name: akeamc
+    name: skool
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/skool-0.1.20/skool-0.1.20.tgz
+    version: 0.1.20
+  - apiVersion: v2
     appVersion: 0.4.2
     created: "2022-12-28T21:50:03.932510146Z"
     dependencies:
@@ -1866,4 +1906,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/trast-0.1.1/trast-0.1.1.tgz
     version: 0.1.1
-generated: "2023-02-05T12:30:55.478911719Z"
+generated: "2023-02-06T19:22:07.919324747Z"
