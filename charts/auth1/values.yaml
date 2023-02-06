@@ -90,10 +90,8 @@ trustProxy: false
 # {token} is a placeholder for the token that will be sent to the user.
 loginUrl: ""
 
-sentry:
-  dsn: ""
-
-  environment: ""
+otlp:
+  endpoint: ""
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

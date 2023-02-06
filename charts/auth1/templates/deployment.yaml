@@ -78,10 +78,8 @@ spec:
                   key: url
             - name: LOGIN_URL
               value: {{ quote .Values.loginUrl }}
-            - name: SENTRY_DSN
-              value: {{ quote .Values.sentry.dsn }}
-            - name: SENTRY_ENVIRONMENT
-              value: {{ quote .Values.sentry.environment }}
+            - name: OTLP_ENDPOINT
+              value: {{ quote .Values.otlp.endpoint }}
             {{- if .Values.ca.secretName }}
             - name: CA_CERT
               value: /etc/ssl/ca/tls.crt
