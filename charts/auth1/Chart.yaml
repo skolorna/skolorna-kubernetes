@@ -6,7 +6,7 @@ version: 0.1.32
 appVersion: "0.2.15"
 dependencies:
   - name: redis
-    version: 15.x.x
+    version: 17.x.x
     repository: "https://charts.bitnami.com/bitnami"
     condition: redis.enabled
 maintainers:
