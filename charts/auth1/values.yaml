@@ -90,6 +90,13 @@ trustProxy: false
 # {token} is a placeholder for the token that will be sent to the user.
 loginUrl: ""
 
+oauth2:
+  google:
+    # The Google OAuth2 secret should contain the following keys:
+    # - client_id
+    # - client_secret
+    secretName: ""
+
 otlp:
   endpoint: ""
 

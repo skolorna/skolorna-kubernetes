@@ -78,6 +78,16 @@ spec:
                   key: url
             - name: LOGIN_URL
               value: {{ quote .Values.loginUrl }}
+            - name: GOOGLE_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.oauth2.google.secretName }}
+                  key: client_id
+            - name: GOOGLE_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.oauth2.google.secretName }}
+                  key: client_secret
             - name: OTLP_ENDPOINT
               value: {{ quote .Values.otlp.endpoint }}
             {{- if .Values.ca.secretName }}
