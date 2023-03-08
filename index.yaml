@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   auth1:
   - apiVersion: v2
+    appVersion: 0.2.20
+    created: "2023-03-08T10:14:17.395234254Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.x.x
+    description: A Helm chart for Kubernetes
+    digest: 53e3af16b4ca18b2c2c492f293ab38510c09982b7bed23879cf31504981263a9
+    maintainers:
+    - email: ake@amcoff.net
+      name: akeamc
+    name: auth1
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/auth1-0.1.37/auth1-0.1.37.tgz
+    version: 0.1.37
+  - apiVersion: v2
     appVersion: 0.2.19
     created: "2023-02-27T19:31:14.068998025Z"
     dependencies:
@@ -2059,4 +2077,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/trast-0.1.1/trast-0.1.1.tgz
     version: 0.1.1
-generated: "2023-02-27T19:31:14.069663833Z"
+generated: "2023-03-08T10:14:17.395982431Z"
