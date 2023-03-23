@@ -5,7 +5,7 @@ type: application
 version: 0.2.16
 dependencies:
   - name: meilisearch
-    version: 0.1.45
+    version: 0.1.49
     repository: "https://meilisearch.github.io/meilisearch-kubernetes"
     condition: meilisearch.enabled
   - name: munin
