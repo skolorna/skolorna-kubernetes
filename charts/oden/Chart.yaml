@@ -2,16 +2,16 @@ apiVersion: v2
 name: oden
 description: A Helm chart for Kubernetes
 type: application
-version: 0.2.16
+version: 0.2.17
 dependencies:
   - name: meilisearch
-    version: 0.1.45
+    version: 0.1.49
     repository: "https://meilisearch.github.io/meilisearch-kubernetes"
     condition: meilisearch.enabled
   - name: munin
-    version: 0.2.16
+    version: 0.2.17
   - name: hugin
-    version: 0.2.16
+    version: 0.2.17
 maintainers:
   - name: akeamc
     email: ake@amcoff.net
