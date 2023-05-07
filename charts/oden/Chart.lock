@@ -1,12 +1,12 @@
 dependencies:
 - name: meilisearch
   repository: https://meilisearch.github.io/meilisearch-kubernetes
-  version: 0.1.49
+  version: 0.1.50
 - name: munin
   repository: ""
-  version: 0.2.23
+  version: 0.2.24
 - name: hugin
   repository: ""
-  version: 0.2.23
-digest: sha256:6ea16651d6abae08e93651ec19e394052ef28725773563dc25a1dc74e221132d
-generated: "2023-04-21T21:59:52.512191487+02:00"
+  version: 0.2.24
+digest: sha256:34319431ff045708bc00fdc28a61ad1215f441a2fd7a243710549329d1b5bdc4
+generated: "2023-05-07T18:08:46.934202423+02:00"
