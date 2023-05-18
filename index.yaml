@@ -1938,6 +1938,23 @@ entries:
     version: 0.1.0
   skool:
   - apiVersion: v2
+    appVersion: 0.4.9
+    created: "2023-05-18T20:27:17.092937749Z"
+    dependencies:
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.x.x
+    description: A Helm chart for Kubernetes
+    digest: 2061d48a340eb7213ac48698463c72c735a70f2d21f3e94c1486138dea2462fc
+    maintainers:
+    - email: ake@amcoff.net
+      name: akeamc
+    name: skool
+    type: application
+    urls:
+    - https://github.com/skolorna/skolorna-kubernetes/releases/download/skool-0.1.26/skool-0.1.26.tgz
+    version: 0.1.26
+  - apiVersion: v2
     appVersion: 0.4.8
     created: "2023-04-08T17:56:34.631375696Z"
     dependencies:
@@ -2370,4 +2387,4 @@ entries:
     urls:
     - https://github.com/skolorna/skolorna-kubernetes/releases/download/trast-0.1.1/trast-0.1.1.tgz
     version: 0.1.1
-generated: "2023-05-07T16:09:21.814410088Z"
+generated: "2023-05-18T20:27:17.094266965Z"
